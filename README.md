@@ -4,6 +4,19 @@ BOOTHの商品編集画面の段落の入力欄を自動的に拡張し、サイ
 
 A Chrome extension that automatically expands and adjusts the size of input fields on BOOTH product editing screens.
 
+
+<h3>📸 動作イメージ / Demo</h3>
+<table>
+  <tr>
+    <th width="50%">Before (適用前)</th>
+    <th width="50%">After (適用後)</th>
+  </tr>
+  <tr>
+    <td><img src="適用前.gif" width="100%" alt="適用前"></td>
+    <td><img src="適用後.gif" width="100%" alt="適用後"></td>
+  </tr>
+</table>
+
 ## 🎯 主な機能 / Features
 
 ### 日本語
