@@ -1,0 +1,58 @@
+/* Product Edit Page Extension for BOOTH - Fixed Width (Character Count Match) */
+
+/* ▼ メインのテキストエリア */
+.charcoal-text-area-textarea,
+textarea.charcoal-text-area-textarea {
+  /* 幅を広げつつ、実際の表示に合わせて最大幅を制限する */
+  width: calc(100% / 0.875) !important;
+  max-width: 720px !important; /* ← ここがポイント（実際の表示幅に合わせる） */
+  
+  /* 自動伸長の設定 */
+  field-sizing: content !important;
+  min-height: 200px !important;
+  height: auto !important;
+  
+  /* 見た目の調整 */
+  padding: 12px 14px !important;
+  box-sizing: border-box !important;
+  resize: none !important;
+  overflow: hidden !important;
+  line-height: 1.6 !important;
+  
+  /* フォントを実際の表示に近づける（OS標準のゴシック等） */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+}
+
+/* ▼ 入力欄の親コンテナ */
+.charcoal-text-area-container {
+  height: fit-content !important;
+  min-height: auto !important;
+  width: 100% !important;
+}
+
+/* ▼ 見出し入力欄 */
+.charcoal-text-field-input,
+.charcoal-text-field-container input {
+  width: calc(100% / 0.875) !important;
+  max-width: 720px !important; /* 見出しも揃える */
+  padding: 10px 14px !important;
+  box-sizing: border-box !important;
+}
+
+.charcoal-text-field-container,
+.form-section {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* ▼ 段落セクションのレイアウト変更（縦積み） */
+li.js-item-module div[class*="desktop:grid-cols-"] {
+  grid-template-columns: 100% !important;
+  display: grid !important;
+  gap: 8px !important;
+}
+
+li.js-item-module div[class*="desktop:grid-cols-"] > div:first-child {
+  width: 100% !important;
+  padding-bottom: 0 !important;
+}

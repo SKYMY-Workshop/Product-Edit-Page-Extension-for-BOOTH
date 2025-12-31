@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Product Edit Page Extension for BOOTH",
+  "version": "1.0.0",
+  "description": "BOOTH商品編集画面の入力欄を使いやすく調整（自動適用版）",
+  "host_permissions": [
+    "https://manage.booth.pm/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://manage.booth.pm/items/*/edit"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
