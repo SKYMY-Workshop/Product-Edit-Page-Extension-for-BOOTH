@@ -1,6 +1,6 @@
 # Product Edit Page Extension for BOOTH
 
-BOOTHの商品編集画面の入力欄を自動的に拡張し、サイズを調整するChrome拡張機能です。
+BOOTHの商品編集画面の段落の入力欄を自動的に拡張し、サイズを調整するChrome拡張機能です。
 設定画面はなく、インストールするだけで機能します。
 
 A Chrome extension that automatically expands and adjusts the size of input fields on BOOTH product editing screens.
@@ -106,7 +106,7 @@ const SETTINGS = {
 BOOTHの素晴らしいプラットフォームを提供してくださっているpixiv Inc.に感謝します。
 Thank pixiv Inc. for providing the wonderful BOOTH platform.
 
-本ツールの開発にあたり、以下のコードを参考にさせていただきました。素晴らしい知見を公開してくださった nekobako 様に感謝いたします。
+また、本ツールの開発にあたり、以下のコードを参考にさせていただきました。素晴らしい知見を公開してくださった nekobako 様に感謝いたします。
 Also, special thanks to nekobako for the inspiring code.
 - [nekobako/content.js (Gist)](https://gist.github.com/nekobako/81cc427b7c80fe072ca82907b9da026f)
 
