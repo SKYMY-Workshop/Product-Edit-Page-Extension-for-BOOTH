@@ -1,24 +1,20 @@
 # Product Edit Page Extension for BOOTH
 
 BOOTHの商品編集画面の段落の入力欄を自動的に拡張し、サイズを調整するChrome拡張機能です。
-設定画面はなく、インストールするだけで機能します。
 
 A Chrome extension that automatically expands and adjusts the size of input fields on BOOTH product editing screens.
-No configuration screen required - just install and it works.
 
 ## 🎯 主な機能 / Features
 
 ### 日本語
-- **インストールするだけで機能**: 有効化するとレイアウト変更が適用されます
-- **入力欄の自動拡張**: 実際の表示幅（最大720px）に合わせて入力欄を広げます
-- **自動高さ調整**: テキスト量に応じて入力欄の高さが自動的に伸びます（field-sizing対応）
-- **文字数表示との同期**: 実際のBOOTH商品ページの表示幅に合わせているため、改行位置の確認が容易です
+- 有効化するとレイアウト変更が適用されます
+- 実際の表示幅（最大720px）に合わせて入力欄を広げます
+- テキスト量に応じて入力欄の高さが自動的に伸びます（field-sizing対応）
 
 ### English
-- **Works just by installing**: Layout changes are applied when activated
-- **Auto-expand input fields**: Expands input fields to match the actual display width (max 720px)
-- **Automatic height adjustment**: Input field height automatically extends according to text amount (field-sizing support)
-- **Synchronized with character count display**: Easy to check line break positions as it matches the actual BOOTH product page display width
+- Layout changes are applied when activated
+- Expands input fields to match the actual display width (max 720px)
+- Input field height automatically extends according to text amount (field-sizing support)
 
 ## 📦 インストール方法 / Installation
 
@@ -51,7 +47,7 @@ No configuration screen required - just install and it works.
 ### 日本語
 1. 拡張機能をインストールして有効化する
 2. BOOTHの商品編集画面（`https://manage.booth.pm/items/*/edit`）を開く
-3. 自動的に入力欄が広がり、快適に編集できます
+3. 自動的に入力欄が広がります。
 
 ### English
 1. Install and enable the extension
