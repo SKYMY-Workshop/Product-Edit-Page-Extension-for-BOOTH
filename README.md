@@ -43,17 +43,6 @@ A Chrome extension that automatically expands and adjusts the size of input fiel
    - 「パッケージ化されていない拡張機能を読み込む」をクリック
    - ダウンロードしたフォルダを選択
 
-### English
-1. **Open Chrome Extensions Page**
-   - Access `chrome://extensions/` in Chrome
-   - Or, Menu → More Tools → Extensions
-
-2. **Enable Developer Mode**
-   - Turn ON "Developer mode" in the top right
-
-3. **Load Extension**
-   - Click "Load unpacked"
-   - Select the downloaded folder
 
 ## 🚀 使い方 / Usage
 
@@ -62,10 +51,6 @@ A Chrome extension that automatically expands and adjusts the size of input fiel
 2. BOOTHの商品編集画面（`https://manage.booth.pm/items/*/edit`）を開く
 3. 自動的に入力欄が広がります。
 
-### English
-1. Install and enable the extension
-2. Open BOOTH product editing screen (`https://manage.booth.pm/items/*/edit`)
-3. Input fields automatically expand for comfortable editing
 
 ## ⚙️ 技術仕様 / Technical Specifications
 
@@ -74,22 +59,9 @@ A Chrome extension that automatically expands and adjusts the size of input fiel
 - Microsoft Edge (Chromium版)
 - その他Chromiumベースのブラウザ / Other Chromium-based browsers
 
-### ファイル構成 / File Structure
-```
-Product-Edit-Page-Extension-for-BOOTH/
-├── manifest.json       # 拡張機能のマニフェストファイル / Extension manifest file
-├── content.js          # 自動調整ロジック（設定値はここに記載）/ Auto-adjustment logic (settings defined here)
-├── styles.css          # スタイルシート / Stylesheet
-├── icon16.png          # アイコン（16x16）/ Icon (16x16)
-├── icon48.png          # アイコン（48x48）/ Icon (48x48)
-└── icon128.png         # アイコン（128x128）/ Icon (128x128)
-```
-
 ## 🔧 カスタマイズ / Customization
 
 動作設定（幅や高さ）を変更したい場合は、`content.js` 内の定数を直接編集してください。
-
-To change operation settings (width and height), directly edit the constants in `content.js`.
 
 ```javascript
 // content.js
