@@ -1,114 +1,103 @@
 # Product Edit Page Extension for BOOTH
 
-BOOTHの商品編集画面の「段落」の入力欄の幅を商品ページ相当に拡張し、縦方向は文字数に応じて自動的に拡張するChrome拡張機能です。
+BOOTHの商品編集画面における「商品説明」等の入力欄幅を商品ページ相当に拡張し、縦方向も文字数に応じて自動的に拡張するChrome拡張機能です。
 
-A Chrome extension that automatically expands and adjusts the size of input fields on BOOTH product editing screens.
+A Chrome extension that automatically expands and adjusts the size of input fields on the BOOTH product editing screen to match the actual product page layout.
 
+## 動作イメージ / Demo
 
-<h3>📸 動作イメージ / Demo</h3>
 <table>
   <tr>
     <th width="50%">Before (適用前)</th>
     <th width="50%">After (適用後)</th>
   </tr>
   <tr>
-    <td><img src="適用前.gif" width="100%" alt="適用前"></td>
-    <td><img src="適用後.gif" width="100%" alt="適用後"></td>
+    <td><img src="適用前.gif" width="100%" alt="Before Application"></td>
+    <td><img src="適用後.gif" width="100%" alt="After Application"></td>
   </tr>
 </table>
 
-## 🎯 主な機能 / Features
+👉 **最新版のダウンロード / Download:** 
 
-### 日本語
-- 有効化するとレイアウト変更が適用されます
-- 実際の表示幅（最大720px）に合わせて入力欄を広げます
-- テキスト量に応じて入力欄の高さが自動的に伸びます（field-sizing対応）
+https://github.com/SKYMY-Workshop/Product-Edit-Page-Extension-for-BOOTH/releases
 
-### English
-- Layout changes are applied when activated
-- Expands input fields to match the actual display width (max 720px)
-- Input field height automatically extends according to text amount (field-sizing support)
+## インストール方法 / Installation
 
-## 📦 インストール方法 / Installation
+1. **ダウンロード**: 上記リンク（Releases）から `Source code.zip` をダウンロードし、解凍します。
+2. **拡張機能管理ページを開く**: Chromeブラウザのアドレスバーに `chrome://extensions/` と入力して開きます。
+3. **デベロッパーモード**: 右上の **「デベロッパーモード」** スイッチを **ON** にします。
+4. **読み込み**: 左上の **「パッケージ化されていない拡張機能を読み込む」** をクリックし、手順1で解凍したフォルダを選択します。
 
-### 日本語
-1. **Chrome拡張機能ページを開く**
-   - Chromeで `chrome://extensions/` にアクセス
-   - または、メニュー → その他のツール → 拡張機能
+> **⚠️ 注意 / Important**
+> 指定したフォルダを後から移動・削除すると拡張機能が動作しなくなります。あらかじめ **マイドキュメント** や **Program Files** など、移動しない場所に保存してから読み込んでください。
 
-2. **開発者モードを有効化**
-   - 右上の「開発者モード」をONにする
+## 🗑️ アンインストール方法 / Uninstallation
 
-3. **拡張機能を読み込む**
-   - 「パッケージ化されていない拡張機能を読み込む」をクリック
-   - ダウンロードしたフォルダを選択
+1. Chromeのツールバーにあるパズルピースアイコン（拡張機能）をクリックし、**「拡張機能を管理」** を選択します。
+2. 一覧から **Product Edit Page Extension** を探し、**「削除」** をクリックします。
+3. インストール時に保存したフォルダを削除します。
 
+---
 
-## 🚀 使い方 / Usage
+## 主な機能 / Features
 
-### 日本語
-1. 拡張機能をインストールして有効化する
-2. BOOTHの商品編集画面（`https://manage.booth.pm/items/*/edit`）を開く
-3. 自動的に入力欄が広がります。
+**🇯🇵 日本語**
+* **レイアウト自動調整**: 拡張機能を有効にすると、編集画面の入力欄が実際の表示幅（最大720px）に合わせて広がります。
+* **高さの自動拡張**: テキスト量に応じて入力欄の高さが自動的に伸び縮みします（`field-sizing` 対応）。これにより、スクロールせずに全体を確認しやすくなります。
 
+---
 
-## ⚙️ 技術仕様 / Technical Specifications
+## 🛠️ カスタマイズ / Customization
 
-### 対応ブラウザ / Supported Browsers
-- Google Chrome (Manifest V3対応)
-- Microsoft Edge (Chromium版)
-- その他Chromiumベースのブラウザ / Other Chromium-based browsers
-
-## 🔧 カスタマイズ / Customization
-
-動作設定（幅や高さ）を変更したい場合は、`content.js` 内の定数を直接編集してください。
+動作設定（幅や高さの制限）を変更したい場合は、フォルダ内の `content.js` にある定数を直接編集してください。
 
 ```javascript
 // content.js
 const SETTINGS = {
-  width: 100,       // 幅の割合 (%) / Width percentage (%)
-  minHeight: 200,   // 最小高さ (px) / Minimum height (px)
-  maxWidth: '720px' // 最大幅 (px) / Maximum width (px)
+  width: 100,       // 幅の割合 (%) / Width percentage
+  minHeight: 200,   // 最小高さ (px) / Minimum height
+  maxWidth: '720px' // 最大幅 (px) / Maximum width
 };
+
 ```
+## 注意事項 / Notes
 
-## 📝 注意事項 / Notes
+* **非公式ツールです**: この拡張機能はBOOTH公式のツールではありません。
+* **仕様変更のリスク**: BOOTHのUIアップデートにより、予告なく動作しなくなる可能性があります。
+* **Unofficial Tool**: This extension is not an official BOOTH tool.
+* **Compatibility**: It may stop working unexpectedly due to BOOTH UI updates.
 
-### 日本語
-- この拡張機能はBOOTHの公式ツールではありません
-- BOOTHのUI更新により動作しなくなる可能性があります
+## 免責事項 / Disclaimer
 
-### English
-- This extension is not an official BOOTH tool
-- It may stop working due to BOOTH UI updates
+本拡張機能をご利用いただく前に、以下の免責事項を必ずご確認ください。
 
-## 🙏 謝辞 / Acknowledgments
+* **非公式ツールであること**
+    本拡張機能は個人の開発者によって作成された非公式ソフトウェアです。pixiv Inc. および BOOTH 公式とは一切関係ありません。本ツールに関するお問い合わせを BOOTH 事務局へ送ることはお控えください。
 
-BOOTHの素晴らしいプラットフォームを提供してくださっているpixiv Inc.に感謝します。
-Thank pixiv Inc. for providing the wonderful BOOTH platform.
+* **保証の否認**
+    本拡張機能は「現状有姿（as is）」で提供されます。開発者は、本拡張機能の完全な動作、特定の目的への適合性、および不具合がないことを保証しません。また、BOOTH の仕様変更により、予告なく動作しなくなっても修正の義務を負いません。
 
-また、本ツールの開発にあたり、以下のコードを参考にさせていただきました。素晴らしい知見を公開してくださった nekobako 様に感謝いたします。
-Also, special thanks to nekobako for the inspiring code.
-- [nekobako/content.js (Gist)](https://gist.github.com/nekobako/81cc427b7c80fe072ca82907b9da026f)
+* **責任の制限**
+    本拡張機能の使用によって生じた、いかなる直接的・間接的な損害（商品説明文の消失、レイアウト崩れ、機会損失、アカウントへの影響などを含むがこれに限らない）について、開発者は一切の責任を負いません。ご利用は利用者ご自身の責任において行ってください。
 
-## 📄 ライセンス / License
+* **権利の帰属**
+    「BOOTH」は、ピクシブ株式会社の商標または登録商標です。
 
-MIT License
+* **BOOTHへの問い合わせ禁止**
+    本ツールが原因で不具合が生じた場合でも、BOOTH公式へのお問い合わせは絶対に行わないでください。
 
+## 謝辞 / Acknowledgments
 
-## 免責事項
+BOOTHという素晴らしいプラットフォームを提供してくださっている pixiv Inc. に感謝します。
+また、本ツールの開発にあたり、以下のコードおよび nekobako 様の知見を参考にさせていただきました。
 
-- 非公式ツールであること 本拡張機能は、個人の開発者によって作成された非公式のソフトウェアです。pixiv Inc. および BOOTH 公式とは一切関係ありません。本拡張機能に関するお問い合わせを BOOTH 事務局へ送ることはお控えください。
+* [nekobako/content.js (Gist)](https://gist.github.com/nekobako/81cc427b7c80fe072ca82907b9da026f)
 
-- 保証の否認 本拡張機能は「現状有姿（as is）」で提供されます。開発者は、本拡張機能の動作、特定の目的への適合性、および不具合がないことを保証しません。また、BOOTH の仕様変更により、予告なく本拡張機能が動作しなくなる可能性があります。
+## ライセンス / License
 
-- 責任の制限 本拡張機能の使用によって生じた、いかなる直接的・間接的な損害（商品説明文の消失、レイアウト崩れ、機会損失、アカウントへの影響などを含むがこれに限らない）について、開発者は一切の責任を負いません。ご利用は利用者ご自身の責任において行ってください。
-
-- 権利の帰属 「BOOTH」は、ピクシブ株式会社の商標または登録商標です。
-
-- BOOTHの仕様変更・改善について 本ツールは、BOOTH公式によるサイト改善や仕様変更を妨げるものではありません。BOOTH側のアップデートにより本ツールの機能が正常に動作しなくなった場合、BOOTH公式へのお問い合わせは絶対に行わないでください。本ツールの動作修正は、開発者の対応可能な範囲で行われます。
-
+MIT License. 詳細は [LICENSE](./LICENSE) を参照してください。
 
 ## 🔄 更新履歴 / Changelog
 
-※ 今後の更新内容はこちらに記載されます / Future updates will be listed here
+* **v1.0.0**
+    * 初回リリース
